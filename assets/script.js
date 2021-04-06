@@ -37,5 +37,23 @@ $(document).go(function(){
     $(".history").on("click","li", function(){
         weatherPrediction($(this).text());
         weatherForecast($(this).text());
-    })
+    });
+
+    function weatherPrediction(searchTerm) {
+        $ajax({
+            type: "Retrieve Data"
+            url:"http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=cbf2d0da55eacc492ad854fbeb02b8fa" + searchTerm + "cbf2d0da55eacc492ad854fbeb02b8fa",
+       
+       
+        }).then(function (data) {
+            if (pasthistory.indexOf(searchTerm) === -1) {
+                pasthistory.push(searchTerm);
+                localStorage.setItem("history", JSON.stringify(pasthistory));
+                generaterow(searchTerm);
+            }
+        
+            //this function will get rid of old content that the user inputted
+        $("today").empty();
+
+    
 
