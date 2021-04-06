@@ -2,9 +2,27 @@
     color: blue
 }
 
+
 li {
     font-style: inherit;
     font-size: 12pt;
     padding: 10px 5px;
 
 }
+
+.History-card {
+    width: 100%;
+    background-color: burlywood;
+}
+.fivedayforecast-card {
+    color: black;
+    background-color: blue;
+    border-radius: 10px;
+    font-size: 10pt;
+}
+
+.fivedayforecastheader {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
